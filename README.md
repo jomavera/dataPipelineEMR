@@ -48,7 +48,7 @@ The resulting dataframe was loaded into a S3 bucket in order to long-term storag
 
 A diagram of the process is below:
 
-![diagram](diagram.png)
+![diagram](diagram.PNG)
 
 
 ## Data Pipeline
@@ -72,7 +72,7 @@ The ETL pipeline was orchestrated by defining a directed acyclic graph (DAG) on 
 
 The DAG is shown below:
 
-![dag](dag.png)
+![dag](dag.PNG)
 
 ### Files
 
