@@ -2,8 +2,6 @@
 
 ## Objective
 
----
-
 The US National Tourism and Trade Office gather data from visitors to the US from all over the world. The objective of this project is to combine this data with statistics of temperature of the country of origin and demographics of state where the traveler visited. This enhancement allows to better understand the incoming travellers to the US. Ultimately, we want to automate this process through a ETL pipeline orchestrated with **Airflow**. A file storage in S3, to easy access and analysis, is the expected product of this data pipeline.
 
 
@@ -16,7 +14,6 @@ The principal issue with the I94 immigration data is that information stores is 
 
 ## Implementation
 
----
 
 ### ETL
 
@@ -104,19 +101,20 @@ The DAG is shown below:
 
 ## Instructions
 
----
 
 On the terminal on the working directory do the following:
 
-1. Add your *Aws Access Key* and *Aws Secret Key* to `dags/scripts/transform.py` file
+1. Download data from https://drive.google.com/drive/folders/1bM4lJhssSqo8DGhv3cVBBbkWYhIvv-JO?usp=sharing and store it in `dags/data` directory.
 
-2. Run `docker-compose up`
+2. Add your *Aws Access Key* and *Aws Secret Key* to `dags/scripts/transform.py` file.
 
-3. On the web browser go to `localhost:8080`
+3. Run `docker-compose up`
 
-4. Unpause *transform* DAG
+4. On the web browser go to `localhost:8080`
 
-5. Once the DAG was completed you can run query examples in `explore.ipynb`
+5. Unpause *transform* DAG
+
+6. Once the DAG was completed you can run query examples in `explore.ipynb`
 
 ## Discussion
 
@@ -125,10 +123,12 @@ On the terminal on the working directory do the following:
 This data pipeline deals with a large amount of data under 10 minutes. If it is the case that the data increases by 100x can be change the cluster creation configuration in order to increase the memory in order to perform the transformations.
 
 **Pipeline must run on a daily basis by 7am**
+
 Given the nature of the data this data pipeline was designed to be runned yearly. If it is the case that the pipeline must run every day then the configuration of the DAG should be change. The `schedule_interval` should be `@daily` and the `start_date` should be at an hour before 7 am. 
 
 
 **Database needed to be accessed by 100+ people.**
+
 This data pipeline stores the transformed data in a S3 bucket where can be accessed by any person. There is no problem that 100+ need to access it.
 
 
