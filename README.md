@@ -9,7 +9,7 @@ The US National Tourism and Trade Office gather data from visitors to the US fro
 
 The scope is to improve gather and combine information related to visitors to the US starting off the I94 immigration data. The output is an analytic table that can be used by data analytics from the government, marketing or other businessess. This table contains information related to the country of origin of the visitors as well as information about the location where the visitor arrived in the US.
 
-The principal issue with the I94 immigration data is that information stores is in keys and it doesn't show it explicitly like for example US states, occupation and dates. Given the large of amount we take advantage of PySpark running in a Elastic MapReduce (EMR) cluster to do the data transformations. Moreover, this process is automated throught Airflow to perform each one of the tasks in order.
+The principal issue with the I94 immigration data is that the information is stored as code like for example US states, occupation and dates. This makes the data not explicit for all type of users. Also this dataset lacks of context information that we are aim to add. Given the large of amount we take advantage of PySpark running in a Elastic MapReduce (EMR) cluster to do the data transformations. Moreover, this process is automated throught Airflow to perform each one of the tasks in order.
 
 
 ## Implementation
