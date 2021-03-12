@@ -13,7 +13,11 @@ from load_subdag import load_files_subdag
 from airflow.operators.subdag_operator import SubDagOperator
 
 # Configurations
-BUCKET_NAME = "dend-jose"
+
+#--#--# SET S3 BUCKET NAME #--#--#
+BUCKET_NAME = 
+#--#--#--#--#--#--#--#--#--#--#--#
+
 transform_script = "transform.py"
 quality_script = "quality.py"
 

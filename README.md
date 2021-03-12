@@ -106,15 +106,19 @@ On the terminal on the working directory do the following:
 
 1. Download data from https://drive.google.com/drive/folders/1bM4lJhssSqo8DGhv3cVBBbkWYhIvv-JO?usp=sharing and store it in `dags/data` directory.
 
-2. Add your *Aws Access Key* and *Aws Secret Key* to `dags/scripts/transform.py` file.
+2. Upload I94 Immigration data to S3 bucket
 
-3. Run `docker-compose up`
+3. Set the name of the S3 bucket in `dags/transform_dag.py`
 
-4. On the web browser go to `localhost:8080`
+4. Add your *Aws Access Key* and *Aws Secret Key* to `dags/scripts/transform.py` file.
 
-5. Unpause *transform* DAG
+5. Run `docker-compose up`
 
-6. Once the DAG was completed you can run query examples in `explore.ipynb`
+6. On the web browser go to `localhost:8080`
+
+7. Unpause *transform* DAG
+
+8. Once the DAG was completed you can run query examples in `explore.ipynb`
 
 ## Discussion
 
