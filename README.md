@@ -1,4 +1,4 @@
-# Capstone Project: Immigration Data
+# Data Pipeline to Transform I94 Immigration Data with PySpark on AWS EMR
 
 ## Objective
 
